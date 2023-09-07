@@ -1,6 +1,24 @@
 # belly-button-challenge
 
-Module 14 Challenge
+Module 14 Challenge.
+
+This is deployed to github pages at : https://rjandromeda.github.io/belly-button-challenge/
+
+### Repository Table of Contents
+
+This repository consists of:
+
+- A folder named Starter_Code, which includes: 
+
+  - app.js - the file with the code for the app
+  - index.html - the index file
+  - samples.json - the sample json of the data
+
+- README.md: this readme file
+
+  - .gitkeep
+
+  - .gitignore
 
 ### Tasks
 
