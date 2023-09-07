@@ -38,7 +38,6 @@ function meta(sample) {
     d3.select("#sample-metadata").html("");
      // Add in the entries for each one in text within the demographics table:
       Object.entries(valueData).forEach(([key,value]) =>
-      // console.log(key,value)
         d3.select("#sample-metadata").append("h5").text(`${key}: ${value}`)
       )});
       };
