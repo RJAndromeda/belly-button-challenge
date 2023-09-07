@@ -5,6 +5,7 @@ const bugs = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom
 d3.json(bugs).then(function(data) {
   console.log(data);
 });
+// Set up the dashboard:
 function init() {
 
 //  #selDataset from the html file:
@@ -30,6 +31,7 @@ function meta(sample) {
   d3.json(bugs).then((data) => {
     let metadata = data.metadata;
     let value = metadata.filter(result => result.id == sample);
+    // console log:
     console.log(value)
     let valueData = value[0];
     // clear out the data between choices:
@@ -71,10 +73,11 @@ let chart  = {
   orientation: 'h',
 };
 let layout = {
+  title: "Top 10 Bacteria present in sample",
   margin:{
     l:75,
     r:75,
-    t:10,
+    t:30,
     b:75},
     height: 500,
     width: 800};
@@ -92,7 +95,7 @@ function bubblechart(sample) {
       let otu_ids = valueData.otu_ids;
       let otu_labels = valueData.otu_labels;
       let sample_values = valueData.sample_values;
-
+// console log:
       console.log(otu_ids, otu_labels, sample_values)
 let trace = {
   x: otu_ids,
@@ -105,7 +108,7 @@ let trace = {
   }
 };
 let layout = {
-  title: "Bacteria overload",
+  title: "Bacteria overload: bacteria present in sample",
   hovermode: "closest",
   xaxis: {title: "OTU ID"}}
 
